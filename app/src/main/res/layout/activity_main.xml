@@ -1,0 +1,278 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:padding="40dp"
+    tools:context=".Epoca">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="@string/mensaje_ip"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/azul_acero" />
+
+                <EditText
+                    android:id="@+id/txtip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_weight="2"
+                    android:ems="10"
+                    android:hint="@string/ipguardar"
+                    android:inputType="text"
+                    android:drawableStart="@drawable/baseline_cloud_circle_24"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/mensaje"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="5dp"
+                    android:text="" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/guardar"
+                    android:layout_width="141dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="2"
+                    android:onClick="crearDatos"
+                    android:backgroundTint="@color/azul_acero"
+                    android:text="@string/guardar" />
+
+                <Button
+                    android:id="@+id/leer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="2"
+                    android:onClick="leerDatos"
+                    android:backgroundTint="@color/azul_acero"
+                    android:text="@string/listar" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/Codigo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="24dp"
+                    android:ems="10"
+                    android:hint="@string/borro"
+                    android:inputType="textPersonName"
+                    android:text=""
+                    android:drawableStart="@drawable/baseline_cached_24"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/Borrar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_weight="2"
+                    android:onClick="borrar"
+                    android:backgroundTint="@color/azul_acero"
+                    android:text="@string/borrar" />
+
+                <Button
+                    android:id="@+id/Actualiza"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_weight="2"
+                    android:onClick="actualizar"
+                    android:backgroundTint="@color/azul_acero"
+                    android:text="@string/actualizar" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/Menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="@string/Menu"
+                    android:textColor="@color/azul_acero"
+                    android:textSize="40dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="60dp"
+                    android:layout_height="65dp"
+                    android:layout_weight="2"
+                    app:srcCompat="@drawable/img" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="60dp"
+                    android:layout_height="65dp"
+                    android:layout_weight="2"
+                    app:srcCompat="@drawable/img_1" />
+            </TableRow>
+
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/epoca"
+                    android:layout_width="106dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:onClick="llamarVentanaEpoca"
+                    android:backgroundTint="@color/azul_acero"
+                    android:text="@string/epoca" />
+
+                <Button
+                    android:id="@+id/genero"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:onClick="llamarVentanaGenero"
+                    android:backgroundTint="@color/azul_acero"
+                    android:text="@string/genero" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="60dp"
+                    android:layout_height="65dp"
+                    android:layout_weight="2"
+                    app:srcCompat="@drawable/img_2" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="60dp"
+                    android:layout_height="65dp"
+                    android:layout_weight="2"
+                    app:srcCompat="@drawable/img_3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/instrumento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:onClick="llamarVentanaInstrumento"
+                    android:backgroundTint="@color/azul_acero"
+                    android:text="@string/instrumento" />
+                <Button
+                    android:id="@+id/musico"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:onClick="llamarVentanaMusico"
+                    android:backgroundTint="@color/azul_acero"
+                    android:text="@string/musico" />
+            </TableRow>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="60dp"
+                    android:layout_height="65dp"
+                    android:layout_weight="2"
+                    app:srcCompat="@drawable/img_4" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/obraFamosa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:gravity="center"
+                    android:onClick="llamarVentanaObraFamosa"
+                    android:backgroundTint="@color/azul_acero"
+                    android:text="@string/obra" />
+            </LinearLayout>
+
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>

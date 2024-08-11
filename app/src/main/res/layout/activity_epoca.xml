@@ -1,0 +1,272 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@drawable/img_5"
+    tools:context=".Epoca">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvNombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blanco_nieve"
+                    android:textSize="15sp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="24dp"
+                    android:textStyle="bold"
+                    android:text="@string/nombreEpoca" />
+
+                <EditText
+                    android:id="@+id/txtNombreEpoca"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawableStart="@drawable/baseline_date_range_24"
+                    android:inputType="text" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvCaracteristica"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blanco_nieve"
+                    android:textSize="15sp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="24dp"
+                    android:textStyle="bold"
+                    android:text="@string/caracteristica" />
+
+                <EditText
+                    android:id="@+id/txtCarateristica"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawableStart="@drawable/baseline_add_24"
+                    android:inputType="text" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvPeriodoInicio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blanco_nieve"
+                    android:textSize="15dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="24dp"
+                    android:textStyle="bold"
+                    android:text="@string/inicioEpoca" />
+
+                <EditText
+                    android:id="@+id/txtInicio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawableStart="@drawable/baseline_date_range_24"
+                    android:inputType="text" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvPeriodoFin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blanco_nieve"
+                    android:textSize="15sp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="24dp"
+                    android:textStyle="bold"
+                    android:text="@string/finEpoca" />
+
+                <EditText
+                    android:id="@+id/txtFin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawableStart="@drawable/baseline_date_range_24"
+                    android:inputType="text" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvFoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blanco_nieve"
+                    android:textSize="15sp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="24dp"
+                    android:textStyle="bold"
+                    android:text="@string/imagen" />
+
+                <EditText
+                    android:id="@+id/txtFoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawableStart="@drawable/baseline_add_link_24"
+                    android:inputType="text" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/guardar"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:onClick="guardar"
+                    android:backgroundTint="@color/marrón"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/guardar" />
+
+                <Button
+                    android:id="@+id/mostrar"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:onClick="Mostrar"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="24dp"
+                    android:backgroundTint="@color/marrón"
+                    android:text="@string/listar" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvActualizar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blanco_nieve"
+                    android:textSize="15sp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="24dp"
+                    android:textStyle="bold"
+                    android:text="@string/codigo" />
+
+                <EditText
+                    android:id="@+id/txtNombreUd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="24dp"
+                    android:drawableStart="@drawable/baseline_cached_23"
+                    android:inputType="text" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/actualizar"
+                    android:layout_width="match_parent"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="24dp"
+                    android:onClick="actualizar"
+                    android:backgroundTint="@color/marrón"
+                    android:text="@string/actualizar" />
+
+                <Button
+                    android:id="@+id/borrar"
+                    android:layout_width="match_parent"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="24dp"
+                    android:onClick="borrar"
+                    android:backgroundTint="@color/marrón"
+                    android:text="@string/borrar" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/respuestaMensaje"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blanco_nieve"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="24dp"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:text="@string/Proceso" />
+
+                <EditText
+                    android:id="@+id/txtMensaje"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="24dp"
+                    android:ems="10"
+                    android:drawableStart="@drawable/baseline_done_24"
+                    android:inputType="text" />
+            </TableRow>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/regresar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:onClick="Regresar"
+                    android:backgroundTint="@color/marrón"
+                    android:text="@string/regresar" />
+            </LinearLayout>
+
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>
